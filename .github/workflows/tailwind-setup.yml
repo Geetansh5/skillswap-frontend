@@ -20,6 +20,10 @@ jobs:
 
       - name: Install dependencies
         run: |
+          npm install  # Install all the dependencies defined in package.json
+
+      - name: Install Tailwind CSS, PostCSS, and Autoprefixer
+        run: |
           npm install -D tailwindcss postcss autoprefixer
 
       - name: Initialize Tailwind CSS
@@ -33,3 +37,4 @@ jobs:
           git add .
           git commit -m "Initialize Tailwind CSS"
           git push
+
